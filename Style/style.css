@@ -1,0 +1,95 @@
+/* 
+#cdc9c5;
+#202020;
+#2C2C2C; 
+*/
+
+
+@import url('https://fonts.googleapis.com/css2?family=Cookie&family=Cormorant:ital,wght@0,400;0,500;0,600;0,700;1,500;1,600&family=Tangerine:wght@400;700&display=swap');
+
+*,
+::before,
+::after{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.preloader {
+    height: 100vh;
+    width: 100vw;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column; 
+}
+
+.welcome {
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  background: #2C2C2C; ;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  letter-spacing: 2px;
+  color: #cdc9c5; }
+
+  
+.heading {
+  font-family: 'Cormorant', serif;
+  font-size: 60px;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: -0.7px;
+  opacity: 0; }
+
+.sub-heading {
+  font-size: 2rem;
+  font-weight: 100;
+  letter-spacing: 2px;
+  font-family: "Avenir Next";
+  margin-bottom: 0.7rem;
+  font-family: 'Tangerine', cursive;
+  opacity: 0; }
+
+.loader-wrapper {
+  height: 2px;
+  width: 150px;
+  background: #cdc9c5;
+  border-radius: 100px;
+  opacity: 0; }
+
+.loader {
+  height: 2px;
+  width: 150px;
+  background: #cdc9c5;
+  border-radius: 100px;
+  background: #383838; }
+
+p {
+  max-width: 500px;
+  font-family: "Avenir";
+  line-height: 25px;
+  text-align: justify;
+  opacity: 0;
+  color: #202020; }
+
+.noise::before{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    content: "";
+    /* you can control opacity of noise  */
+    opacity: 0.025;  
+    z-index: 1000;
+    pointer-events: none;
+    background: url(../Assests/icon/noise.gif) ;
+}
+
+
