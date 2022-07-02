@@ -8,10 +8,13 @@
 	<!-- Stylesheet -->
 	<link rel="stylesheet" href="../Style/style.css">
 	<!-- JavaScript -->
+	<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
 	<script defer src="../Scripts/anime.js"></script>
 	<script defer src="../Scripts/welcome.js"></script>
+	<script defer src="../Scripts/nav.js"></script>
 </head>
-<body class="myEffect">
+<body class="myEffect" style="overflow-x: hidden;">
 
 	<!-- Preloader -->
 	<div class="prelodaer">
@@ -26,17 +29,70 @@
 	</div>
 
 
-	<div class="after-preloader-contant">
+		<div class="after-preloader-contant">
+
+	<!-- navigation -->
+			<div class="menu-open">MENU</div>
+			<div class="nav-container">
+				<div class="menu-close">CLOSE</div>
+
+				<nav class="menu">
+					<div class="menu__item">
+						<a class="menu__item-link" href="../Pages/index.html">Home</a>
+						<div class="marquee">
+							<div class="marquee__inner">
+								<span>Home - Home - Home - Home - Home - Home - Home</span>
+							</div>
+						</div>
+					</div>
+					<div class="menu__item">
+						<a class="menu__item-link" href="../Pages/Projects.html">Project</a>
+						<div class="marquee">
+							<div class="marquee__inner">
+								<span
+									>Project - Project - Project - Project - Project - Project
+									- Project</span
+								>
+							</div>
+						</div>
+					</div>
+					<div class="menu__item">
+						<a class="menu__item-link" href="../Pages/aboutme.html">About</a>
+						<div class="marquee">
+							<div class="marquee__inner">
+								<span>About - About - About - About - About - About - About</span>
+							</div>
+						</div>
+					</div>
+					<div class="menu__item">
+						<a class="menu__item-link" href="../Pages/contact.html">Contact</a>
+						<div class="marquee">
+							<div class="marquee__inner">
+								<span
+									>Contact - Contact - Contact - Contact - Contact - Contact -
+									Contact</span
+								>
+							</div>
+						</div>
+					</div>
+				</nav>
+			</div>
 
 		<!-- Home page -->
-		<header class="home--header">
-			<p class="header-text">Yash Jivani</p>
-			<div class="scrolling">
-				<h2 class="scrolling-text"><span> —</span>Frontend Developer   </h2>
+			<header class="home--header">
+				<p class="header-text">Yash Jivani</p>
+				<div class="scrolling">
+					<h2 class="scrolling-text"><span> —</span>Frontend Developer   </h2>
+				</div>
+			</header>
+			<div style="background: red;">nothing</div>
+			<div style="background: red;">nothing</div>
+			<div style="background: red;">nothing</div>
+			<div style="background: red;">nothing</div>
+			<div style="background: red;">nothing</div>
+			<div style="background: red;">nothing</div>
+			
 		</div>
-	</header>
-	<div style="background: red;">nothing</div>
-</div>
 
 </body>
 </html>
