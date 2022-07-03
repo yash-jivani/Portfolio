@@ -1,5 +1,6 @@
 /* 
 #cdc9c5;
+#e1dfdd
 #202020;
 #2C2C2C; 
 */
@@ -16,18 +17,22 @@
   box-sizing: border-box;
 }
 
-.myEffect::before{
+body{
+  font-family: "Ogg",serif;
+}
+
+/* .myEffect::before{
   position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
   content: "";
-  opacity: 0.03;  
+  opacity: 0.025;  
   z-index: 10;
   pointer-events: none;
   background: url(../Assests/icon/noise.gif) ;
-}
+} */
 
 .preloader {
     height: 100vh;
@@ -86,12 +91,13 @@
   border-radius: 100px;
   background: #383838; }
 
-p {
-  font-family: "Avenir";
-  line-height: 25px;
-  text-align: justify;
+body .after-preloader-contant{
   opacity: 0;
-  color: #202020; }
+}
+
+.after-preloader2{
+  display: none;
+}
 
 .noise::before{
     position: fixed;
@@ -113,7 +119,7 @@ p {
   height: 100vh;
   width: 100%;
   /* color: #202020; */
-  background-color: #F5F5F5;
+  background-color: #e1dfdd;
   overflow: hidden;
   position: relative;
 }
@@ -121,6 +127,7 @@ p {
 .home--header .header-text{
   position: absolute;
   opacity: 1;
+  font-family: "Ogg";
   top: 40%;
   left: 2%;
   color: #000;
@@ -137,7 +144,7 @@ p {
 .scrolling .scrolling-text {
   position: absolute;
   font-family: 'Tangerine', cursive;
-  bottom: 20%;
+  bottom: 10%;
 	width: 100%;
 	margin: 0;
 	padding: 0;
@@ -288,4 +295,48 @@ p {
 	font-style: italic;
 }
 
+.menu__item-link:link,
+.menu__item-link:visited{
+  color:#cdc9c5;
+  text-decoration: none;
+}
+
+/* My Text */
+
+.text-container {
+  display: flex;
+  padding: 15rem 5rem;
+  background-color: #e1dfdd;
+  justify-content: space-between;
+  align-items: flex-start;
+  /* height: 200vh; */
+  width: 100%;
+}
+.text-container .text {
+  font-size: 2rem;
+  font-family: "Ogg";
+  padding-left: 20rem;
+
+}
+
+.text-container .num{
+  font-size: 2.5rem;
+  /* padding-left: 20rem; */
+}
+
+.text span {
+  background: linear-gradient(
+    to right,
+    rgb(255, 255, 255) 50%,
+    rgb(37, 37, 37) 50%
+  );
+  background-size: 200% 100%;
+  background-position-x: 100%;
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  
+  margin: 2rem 0;
+  display: inline-block;
+}
 

@@ -57,13 +57,13 @@ document.addEventListener('DOMContentLoaded', () => {
 	});
 })
 
-//Paragraphs
-// anime({
-// 	targets: 'scrolling',
-//   opacity: 1,
-//   duration: 1800,
-//   translateY: ["-30px", "0px"],
-//   easing: "easeOutExpo",
-// 	delay: (el, i) => 5200 + 100 * i,
-// })
+anime({
+	targets: '.after-preloader-contant',
+  	opacity: 1,
+  	duration: 1800,
+  	translateY: ["-30px", "0px"],
+  	easing: "easeOutExpo",
+		delay: (el, i) => 5200 + 100 * i,
+})
+
 
