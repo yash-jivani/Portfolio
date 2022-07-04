@@ -364,12 +364,37 @@ body .after-preloader-contant{
   display: flex;
   justify-content: space-between;
   width: 100%;
+  margin:20rem 0;
+
 }
 .project-info{
-  width: 35%;
-}
-.project-img{
-  width: 60%;
+  width: 50%;
+  padding-right: 1rem;
+  position: relative;
 }
 
+.project-info span{
+  position: sticky;
+  /* text-decoration: underline; */
+  top: 0;
+}
+.project-img{
+  width: 50%;
+}
+
+
+.project-img img{
+  width: 100%;
+  height: 100%;
+}
+
+.project-title{
+  font-size: 6rem;
+}
+
+.project-subtitle{
+  font-size: 2rem;
+  margin-top: 1rem;
+  color: #2C2C2C;
+}
 
