@@ -8,7 +8,7 @@ body {
 	width: 100%;
 	height: 100vh;
 	box-sizing: border-box;
-	background: #c5c0b2;
+	background: #cdc9c5;
 	overflow: hidden;
 }
 
@@ -25,7 +25,8 @@ body {
 .item {
 	position: relative;
 	flex-grow: 1;
-	font-family: "Ogg",serif;
+	font-family: serif;
+	font-weight: lighter;
 	font-size: 220px;
 	transition: all 300ms ease-in-out;
 }
@@ -86,43 +87,6 @@ img {
 	.container-img-wrap {
 		display: none;
 	}
-	.navbar {
-		display: none !important;
-	}
-
-
-
-}
-
-.site-logo {
-	position: fixed;
-	left: 50%;
-	transform: translateX(-50%);
-	font-family: "Mak";
-	font-size: 24px;
-	line-height: 100px;
-	text-transform: uppercase;
-}
-
-.navbar {
-	position: fixed;
-	width: 100%;
-	height: 100px;
-	padding: 0 40px;
-	display: flex;
-	justify-content: space-between;
-	font-family: Arial, Helvetica, sans-serif;
-	text-transform: uppercase;
-	line-height: 100px;
-}
-
-.site-menu {
-	display: flex;
-}
-
-.menu-item {
-	margin-left: 60px;
-    font-family: "Ogg",serif;
 
 }
 
@@ -141,7 +105,7 @@ img {
 }
 
 .header-left span {
-	font-family: "Ogg",serif;
+	font-family: serif;
 }
 
 .link {
@@ -149,7 +113,7 @@ img {
 }
 
 .link a {
-	font-family: "Ogg",serif;
+	font-family: serif;
 	font-size: 16px;
 	color: #000;
 }
@@ -159,4 +123,8 @@ img {
 {
     color: #000;
     text-decoration: none;
+}
+
+a:hover{
+	border-bottom: 1px solid black;
 }
