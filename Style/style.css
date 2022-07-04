@@ -143,7 +143,8 @@ body .after-preloader-contant{
 }
 .scrolling .scrolling-text {
   position: absolute;
-  font-family: 'Tangerine', cursive;
+  font-family:"Ogg",serif;
+  font-weight: 300;
   bottom: 10%;
 	width: 100%;
 	margin: 0;
@@ -325,18 +326,50 @@ body .after-preloader-contant{
 }
 
 .text span {
-  background: linear-gradient(
-    to right,
-    rgb(255, 255, 255) 50%,
-    rgb(37, 37, 37) 50%
-  );
-  background-size: 200% 100%;
-  background-position-x: 100%;
-  color: transparent;
-  background-clip: text;
-  -webkit-background-clip: text;
-  
-  margin: 2rem 0;
-  display: inline-block;
+  color: black;
+
 }
+
+.recent-projects-section{
+  background-color: #e1dfdd;
+  padding: 7rem 5rem;
+
+
+}
+
+.recent-projects {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  /* height: 200vh; */
+  width: 100%;
+}
+.recent-projects .text {
+  font-size: 2rem;
+  font-family: "Ogg";
+  padding-left: 20rem;
+
+}
+
+.recent-projects .num{
+  font-size: 2.5rem;
+  /* padding-left: 20rem; */
+}
+
+.text span {
+  color: black;
+}
+
+.project{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.project-info{
+  width: 35%;
+}
+.project-img{
+  width: 60%;
+}
+
 
