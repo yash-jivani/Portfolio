@@ -17,6 +17,10 @@
   box-sizing: border-box;
 }
 
+html{
+  scroll-behavior: smooth;
+}
+
 body{
   font-family: "Ogg",serif;
   background-color: #e1dfdd;
@@ -89,24 +93,6 @@ body{
   background: url(../Assests/icon/noise.gif) ;
 }
 
-footer .heading {
-  font-family: 'Cormorant', serif;
-  font-size: 60px;
-  margin-bottom: 1rem;
-  text-transform: uppercase;
-  letter-spacing: -0.7px;
- }
-
-footer .sub-heading {
-  font-size: 2rem;
-  font-weight: 100;
-  letter-spacing: 2px;
-  /* font-family: "Avenir Next"; */
-  margin-bottom: 0.7rem;
-  font-family: 'Tangerine', cursive;
-}
-
-
 .noise::before{
     position: fixed;
     top: 0;
@@ -127,6 +113,7 @@ footer .sub-heading {
   height: 100vh;
   width: 100%;
   background-color: #e1dfdd;
+  /* background-color: #383838; */
   overflow: hidden;
   position: relative;
 }
@@ -181,22 +168,16 @@ footer .sub-heading {
   grid-template-columns: 1fr 4fr;
   padding: 15rem 5rem;
   background-color: #e1dfdd;
-  /* justify-content: space-between;
-  align-items: flex-start; */
-  /* height: 200vh; */
   width: 100%;
 }
 .text-container .text {
   font-size: 2rem;
-  font-family: "Ogg";
+  font-family: "Ogg",serif;
   line-height: 3rem;
-  /* letter-spacing: 0.3px; */
-
 }
 
-.text-container .num{
+.num{
   font-size: 2.5rem;
-  /* padding-left: 20rem; */
 }
 
 .first-text{
@@ -206,7 +187,6 @@ footer .sub-heading {
 .text span {
   color: black;
   display: inline-block;
-
 }
 
 /* ########## PROJECTS ####### */
@@ -226,11 +206,11 @@ footer .sub-heading {
 .recent-projects .text {
   font-size: 2rem;
   font-family: "Ogg", serif;
-  padding-left: 20rem;
+  /* padding-left: 20rem; */
 
 }
 
-.recent-projects .num{
+.num{
   font-size: 2.5rem;
 }
 
@@ -243,8 +223,8 @@ footer .sub-heading {
   justify-content: space-between;
   width: 100%;
   margin:10rem 0;
-
 }
+
 .project-info{
   width: 50%;
   padding-right: 1rem;
@@ -266,11 +246,21 @@ footer .sub-heading {
   height: 100%;
 }
 
+.project-img-small{
+  display: none;
+}
+
 .project-title{
   font-size: 6rem;
 }
 
+.p-title:hover{
+  text-decoration: underline;
+} 
+
+
 .project-subtitle{
+  display: block;
   font-size: 1.4rem;
   margin-top: 1rem;
   color: #2C2C2C;
@@ -358,6 +348,7 @@ footer .sub-heading {
 
 .tech-icons{
   display: flex;
+  flex-wrap: wrap;
   margin-top: 2rem;
   align-items: center;
   justify-content: space-between;
@@ -378,11 +369,27 @@ footer .sub-heading {
 
 footer{
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr ;
   padding:  5rem;
   align-items: center;
   padding-bottom: 2rem ;
   background-color: #e1dfdd;
+}
+
+footer .heading {
+  font-family: 'Cormorant', serif;
+  font-size: 60px;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: -0.7px;
+ }
+
+footer .sub-heading {
+  font-size: 2rem;
+  font-weight: 100;
+  letter-spacing: 2px;
+  margin-bottom: 0.7rem;
+  font-family: 'Tangerine', cursive;
 }
 
 footer a{
@@ -398,15 +405,23 @@ footer ul{
 }
 
 .contact{
-  margin: 2rem 0;
+  /* margin: 2rem 0; */
+  
   width: 100%;
   display:flex;
+  flex-direction: column;
   justify-content: space-evenly;
+}
+
+.contact h3,
+.social h3{
+  margin-bottom: .7rem;
 }
 
 .social{
   width: 100%;
   display:flex;
+  flex-direction: column;
   justify-content: space-evenly;
 }
 
@@ -419,3 +434,355 @@ footer a:hover{
   border-bottom: 1px solid black;
   backface-visibility: hidden;
 }
+
+.contact-me{
+  display: flex;
+  justify-content: space-between;    
+  align-items: flex-start;
+
+}
+
+
+/* --- MEDIA QUERY --- */
+
+@media (max-width:1490px) {
+  .project-title{
+    font-size: 5rem;
+  }
+}
+
+@media(max-width:1250px){
+  .home--header .header-text{
+    font-size: 5rem;
+    letter-spacing: -4.7px;
+  }
+
+  .num{
+    font-size: 1.9rem;
+  }
+
+  .text span {
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+
+  }
+
+  .project-title{
+    font-size: 4rem;
+  }
+
+  .project-subtitle{
+    font-size: 1.3rem;
+  }
+
+  .about-subheading{
+    font-size: 2rem;
+  }
+
+}
+
+@media(max-width:1186px){
+  footer .heading {
+    font-size: 3rem;
+   }
+}
+
+@media(max-width:1024px){
+  .home--header .header-text{
+    font-size: 5rem;
+    letter-spacing: -3.9px;
+  }
+
+  .text-container {
+    padding: 12rem 3rem;
+  }
+
+  .recent-projects-section{
+    padding: 7rem 3rem 0rem 3rem;
+  }
+
+  .project-title{
+    font-size: 3.5rem;
+  }
+
+  .project-subtitle{
+    font-size: 1.1rem;
+  }
+
+  .about-me{
+    padding: 3rem;
+  }
+
+  .about-info p{
+    font-size: 1.1rem;
+  }
+
+  footer{
+    padding:  3rem 3rem;
+  }
+}
+
+@media (max-width:913px) {
+  footer .heading {
+    font-size: 2rem;
+   }
+}
+
+@media(max-width:867px){
+  .project-title{
+    font-size: 3rem;
+  }
+
+  .project-subtitle{
+    font-size: 1rem;
+  }
+}
+
+@media(max-width:768px){
+  .text-container {
+    padding: 5rem 1.5rem;
+  }
+
+  .recent-projects-section{
+    padding: 7rem 1.5rem 0rem 1.5rem;
+  }
+
+  .about-me{
+    padding: 1.5rem;
+  }
+
+  footer{
+    padding:  2.5rem 1.5rem;
+    align-items: center;
+  }
+
+  footer h3{
+    margin-bottom: 1rem;
+  }
+
+  .text span {
+    font-size: 1.3rem;
+    line-height: 2.3rem;
+
+  }
+
+  .project{
+    margin: 6rem 0;
+  }
+
+  .project-3{
+    margin: 4rem 0;
+  }
+
+  .recent-projects-section .btn:link,
+  .recent-projects-section .btn:visited {
+    font-size: 1rem;
+  }
+
+  .contact{
+    /* margin-top: 1.5rem; */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .social{
+    /* margin-top: 1.5rem; */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .aboutme-wrapper{
+    grid-template-columns: 1fr;
+    grid-template-rows: 2;
+  }
+
+  .about-info p{
+
+    margin-bottom: 1rem;
+    font-size: 1.01rem;
+    color: #383838;
+  }
+
+}
+
+@media (max-width:720px) {
+  .project-title{
+    font-size: 2.2rem;
+  }
+  .num{
+    font-size: 1.7rem;
+  }
+
+  .text span {
+    font-size: 1.4rem;
+    line-height: 2rem;
+
+  }
+
+  .project{
+    margin: 3.2rem 0;
+  }
+
+  footer .heading {
+    font-size: 1.7rem;
+    letter-spacing: -0.5px;
+    margin-bottom: 0.3rem;
+   }
+  
+  footer .sub-heading {
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+  }
+
+}
+
+@media (max-width:600px){
+  .home--header .header-text{
+    font-size: 4rem;
+    letter-spacing: -4.7px;
+  }
+  .project{
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .project-info{
+    width: 100%;
+  }
+
+  .project-info span{
+    position: relative;
+  }
+
+  .project-img{
+    flex-direction: column;
+    width: 100%;
+    display: none;
+  }
+
+  .project-subtitle{
+    font-size: 1rem;
+    margin: 1.2rem 0;
+    color: #2C2C2C;
+  }
+
+  .project-img-small{
+    display: block;
+    height: 500px;
+    background-attachment: fixed;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .ps-img-1{
+    background-image: url(../Assests/imgs/three.png);
+  }
+  .ps-img-2{
+    background-image: url(../Assests/imgs/plantgenics.png);
+  }
+  .ps-img-3{
+    background-image: url(../Assests/imgs/Two.png);
+    background-position: left;
+  }
+
+  .footer .heading {
+    font-size: 1.2rem;
+    letter-spacing: -0.5px;
+    margin-bottom: 0.3rem;
+}
+
+footer .sub-heading {
+  font-size: 1.1rem;
+}
+
+.contact{
+  margin: 0;
+}
+
+.social{
+  margin-top: 0;
+}
+
+}
+
+@media (max-width:452px){
+  .home--header .header-text{
+    font-size: 3rem;
+    letter-spacing: -1.7px;
+    width: 100%;
+    text-align: center;
+  }
+  .text-container {
+    display: flex;
+    padding: 5rem 0.9rem;
+    flex-direction: column;
+  }
+  .text-container .num{
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  .text span {
+    font-size: 1.2rem;
+  }
+
+  .recent-projects{
+    /* align-items: flex-start; */
+    flex-direction: column
+  }
+
+  .recent-projects-section {
+    padding: 3.5rem 0.9rem 0rem 0.9rem;
+  }
+
+  .project-3{
+    margin-bottom: 2rem;
+  }
+
+  .about-heading{
+    flex-direction: column;
+  }
+
+  .about-me {
+    padding: 3.5rem 0.9rem;
+  }
+  footer{
+    display: flex;
+    flex-direction: column;
+  }
+  .contact-me{
+    flex-direction: column;
+    margin-top: 2rem;
+    text-align: center;
+  }
+
+  .about-me .about-heading .num{
+    font-size: 1.7rem;
+  }
+
+  .about-me .about-heading .text{
+    font-size: 1rem;
+    line-height: 0;
+  }
+
+  .aboutme-wrapper{
+    padding: 2rem 0 4rem 0;
+  }
+
+  .project-1{
+    margin: 2rem 0 3.2rem 0;
+
+  }
+
+  .social{
+    margin-top: 1rem;
+  }
+  .about-img {
+    width: 100%;
+}
+}
+
+
+
