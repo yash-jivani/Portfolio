@@ -87,7 +87,7 @@ body{
   width: 100vw;
   height: 100vh;
   content: "";
-  opacity: 0.023;  
+  opacity: 0.02;  
   z-index: 10;
   pointer-events: none;
   background: url(../Assests/icon/noise.gif) ;
@@ -139,6 +139,7 @@ body{
   position: absolute;
   font-family:"Ogg",serif;
   font-weight: 300;
+  right: -5%;
   bottom: 10%;
 	width: max-content;
 	margin: 0;
@@ -250,6 +251,7 @@ body{
   display: none;
 }
 
+
 .project-title{
   font-size: 6rem;
 }
@@ -258,9 +260,14 @@ body{
   text-decoration: underline;
 } 
 
+.project .wrapper-info a:link,
+.project .wrapper-info a:visited
+{
+  color: #202020;
+  text-decoration: none;
+}
 
 .project-subtitle{
-  display: block;
   font-size: 1.4rem;
   margin-top: 1rem;
   color: #2C2C2C;
@@ -284,6 +291,12 @@ body{
   text-decoration: none;
   text-shadow: 0 0 0 rgb(48, 48, 48);
 }
+
+.project-info .wrapper-info{
+  position: sticky;
+  top: 5%;
+}
+
 
 /* ########## ABOUT ########## */
 
@@ -574,6 +587,8 @@ footer a:hover{
     margin: 4rem 0;
   }
 
+
+
   .recent-projects-section .btn:link,
   .recent-projects-section .btn:visited {
     font-size: 1rem;
@@ -652,7 +667,7 @@ footer a:hover{
     width: 100%;
   }
 
-  .project-info span{
+  .project-info .wrapper-info{
     position: relative;
   }
 

@@ -6,150 +6,76 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="short icon" href="../Assests/icon/logo.jpg">
 
-		<title>Projects</title>
+		<title> Contact • Yash Jivani </title>
 		<link rel="stylesheet" href="../Style/projects.css" />
-		<script src="https://unpkg.co/gsap/dist/gsap.min.js"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
+		<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+		<script defer src="../Scripts/cursor.js"></script>
 	</head>
 	<body>
-		<div class="wrapper">
+		
 
-			<div class="header">
-				<div class="header-left">/all projects</div>
-                <div> <a href="../Pages/index.html" class="homeLink">Home</a></div>
-			</div>
-			<div class="container">
-				<div class="container-items">
-					<div class="container-img-wrap">
-						<div class="container-img"></div>
-					</div>
-					<div class="item">
-						<a href="https://yash-jivani.github.io/Plantgenics.github.io/" class="container-item" data-img="../Assests/imgs/one.png">
-							<h3>1</h3>
-						</a>
-					</div>
-					<div class="item">
-						<a href="https://yash-jivani.github.io/ENS-CryptoWeb/" class="container-item" data-img="../Assests/imgs/two.png">
-							<h3>2</h3>
-						</a>
-					</div>
-					<div class="item">
-						<a href="https://yash-jivani.github.io/Restraunt-Website/" class="container-item" data-img="../Assests/imgs/three.png">
-							<h3>3</h3>
-						</a>
-					</div>
-					<div class="item">
-						<a href="https://61f7e94f5deb8ac24bacb23b--fervent-franklin-6c29b2.netlify.app/" class="container-item" data-img="../Assests/imgs/five.png">
-							<h3>4</h3>
-						</a>
-					</div>
-					<div class="item">
-						<a href="https://61f8468fbda02c083d1e3105--fervent-franklin-6c29b2.netlify.app/" class="container-item" data-img="../Assests/imgs/six.png">
-							<h3>5</h3>
-						</a>
-					</div>
-					<div class="item">
-						<a href="#" class="container-item" data-img="../Assests/imgs/one.png">
-							<h3>6</h3>
-						</a>
-					</div>
+		<div class="project-container" >
+			<div class="cursor"></div>
+			<div class="projects-wrapper">
 
+				<div class="header" data-aos="zoom-in" >
+					<h2>/ALL PROJECTS</h2>
+					<h6><a href="../index.html">HOME</a></h6>
 				</div>
+				<div class="projects" data-aos="fade-up" data-aos-delay="500">
+					<div class="project project-start">
+						<h4> Plantgenics</h4>
+						<h5> Buy Plant Online for all kinds of gardening uses</h5>
+						<a href="https://github.com/yash-jivani/Plantgenics.github.io"><h6>Github Link &#8594;</h6></a>
+					</div>
+					<div class="project">
+						<h4>ENS-CryptoWeb</h4>
+						<h5> Real-time trading status for the top Cryptocurrency</h5>
+						<a href="https://github.com/yash-jivani/ENS-CryptoWeb"><h6>Github Link &#8594;</h6></a>
+					</div>
+					<div class="project">
+						<h4>Heritage-Detection </h4>
+						<h5>ML Project UI</h5>
+						<a href="https://github.com/yash-jivani/Heritage-Detection"><h6>Github Link &#8594;</h6></a>
+					</div>
+					<div class="project">
+						<h4>Github Profiles </h4>
+						<h5>Search Github Profiles with Username</h5>
+						<a href="https://github.com/yash-jivani/Github-Profiles"><h6>Github Link &#8594;</h6></a>
+					</div>
+					<div class="project">
+						<h4>Bookmark Web </h4>
+						<h5>Bookmark Website UI</h5>
+						<a href="https://github.com/yash-jivani/BookmarkWeb"><h6>Github Link &#8594;</h6></a>
+					</div>
+					<div class="project ">
+						<h4>Restraunt-Website</h4>
+						<h5>EAT RIGHT FOOD</h5>
+						<a href="https://github.com/yash-jivani/Restraunt-Website"><h6>Github Link &#8594;</h6></a>
+					</div>
+					<div class="project ">
+						<h4>Password-Generator</h4>
+						<h5>Generate random passwords based on user requirements</h5>
+						<a href="https://github.com/yash-jivani/Password-Generator"><h6>Github Link &#8594;</h6></a>
+					</div>
+					<div class="project project-end">
+						<h4>Web-Page-Segments </h4>
+						<h5>Login page, signup page, forgot password page</h5>
+						<a href="https://github.com/yash-jivani/Web-Page-Segments"><h6>Github Link &#8594;</h6></a>
+					</div>
+				</div>
+
 			</div>
 		</div>
+		<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+		<script>
+			AOS.init(
+				{
+					duration: 600,
+				}
+			);
+		</script>
 	</body>
-	<script>
-		const allcontainer = gsap.utils.toArray(".container-item");
-		const venueImageWrap = document.querySelector(".container-img-wrap");
-		const venueImage = document.querySelector(".container-img");
-
-		function initcontainer() {
-			allcontainer.forEach((link) => {
-				link.addEventListener("mouseenter", venueHover);
-				link.addEventListener("mouseleave", venueHover);
-				link.addEventListener("mousemove", moveVenueImage);
-			});
-		}
-
-		function moveVenueImage(e) {
-			let xpos = e.clientX;
-			let ypos = e.clientY;
-			const tl = gsap.timeline();
-			tl.to(venueImageWrap, {
-				x: xpos,
-				y: ypos,
-			});
-		}
-
-		function venueHover(e) {
-			if (e.type === "mouseenter") {
-				const targetImage = e.target.dataset.img;
-
-				const tl = gsap.timeline();
-				tl.set(venueImage, {
-					backgroundImage: `url(${targetImage})`,
-				}).to(venueImageWrap, {
-					duration: 0.5,
-					autoAlpha: 1,
-				});
-			} else if (e.type === "mouseleave") {
-				const tl = gsap.timeline();
-				tl.to(venueImageWrap, {
-					duration: 0.5,
-					autoAlpha: 0,
-				});
-			}
-		}
-
-		function init() {
-			initcontainer();
-		}
-
-		window.addEventListener("load", function () {
-			init();
-		});
-
-		tl = new TimelineMax();
-
-		tl.from(".navbar > div", 1.6, {
-			opacity: 0,
-			y: 60,
-			ease: Expo.easeInOut,
-			delay: 0.6,
-		});
-
-		tl.from(
-			".site-logo",
-			1.6,
-			{
-				opacity: 0,
-				y: 40,
-				ease: Expo.easeInOut,
-			},
-			"-=1.6"
-		);
-
-		tl.staggerFrom(
-			".site-menu > div",
-			1,
-			{
-				opacity: 0,
-				y: 60,
-				ease: Power2.easeOut,
-			},
-			0.2
-		);
-
-		tl.staggerFrom(
-			".header > div",
-			1,
-			{
-				opacity: 0,
-				y: 60,
-				ease: Power2.easeOut,
-				delay: -1.4,
-			},
-			0.2
-		);
-	</script>
+	
 </html>
